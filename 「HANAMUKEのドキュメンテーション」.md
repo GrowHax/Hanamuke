@@ -7,15 +7,17 @@
 ## 📝 Functions
 + [warp](#warp)
 + [Log](#Log)
++ [Drop](#Drop)
+  
 ---
 
 ## warp
 ```lua
--- Example usage:
 warp("WORLD")
 ```
 warp with DoorID is as follow.
 ```lua
+-- Example usage:
 warp("WORLD|DOORID")
 ```
 
@@ -30,3 +32,12 @@ This will print "Hello There" on to the console.
 
 ---
 
+## Drop
+```lua
+Drop(itemid, amount)
+```
+
+```lua
+-- Example usage:
+Drop(2, 10)
+```
