@@ -6,6 +6,8 @@
 
 ## 📝 Functions
 + [warp](#warp)
++ [Log](#Log)
+---
 
 ## warp
 ```lua
