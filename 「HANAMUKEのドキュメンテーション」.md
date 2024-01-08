@@ -43,3 +43,13 @@ Dropping 10 blocks of dirt.
 -- Example usage:
 Drop(2, 10)
 ```
+
+## FindPath
+```lua
+FindPath(int x, int y)
+```
+Teleports to the best path to the destination.
+```lua
+-- Example usage:
+FindPath(23,50)
+```
