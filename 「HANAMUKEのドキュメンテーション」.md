@@ -4,10 +4,11 @@
     <br> 
 </p>
 
-## 📝 Functions
+## 📝 Functions [Documentation]
 + [warp](#warp)
 + [Log](#Log)
 + [Drop](#Drop)
++ [FindPath](#FindPath)
   
 ---
 
