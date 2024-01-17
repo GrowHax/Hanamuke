@@ -39,9 +39,6 @@ This will print "Hello There" on to the console.
 ```lua
 Drop(itemid, amount)
 ```
-
----
-
 Dropping 10 blocks of dirt.
 ```lua
 -- Example usage:
