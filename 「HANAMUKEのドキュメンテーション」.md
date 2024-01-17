@@ -40,11 +40,15 @@ This will print "Hello There" on to the console.
 Drop(itemid, amount)
 ```
 
+---
+
 Dropping 10 blocks of dirt.
 ```lua
 -- Example usage:
 Drop(2, 10)
 ```
+
+---
 
 ## FindPath
 ```lua
@@ -55,6 +59,8 @@ Teleports to the best path to the destination.
 -- Example usage:
 FindPath(23,50)
 ```
+
+---
 
 ## IsTileReady
 ```lua
@@ -68,5 +74,7 @@ yy = GetPos().y // 32
 
 IsTileReady(xx, yy)
 ```
+
+---
 
 
