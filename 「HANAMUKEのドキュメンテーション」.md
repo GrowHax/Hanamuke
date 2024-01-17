@@ -1,6 +1,6 @@
 ---
 
-<p align="center"> +Hanamuke+
+<h1 align="center"> +Hanamuke+
     <br> 
 </p>
 
