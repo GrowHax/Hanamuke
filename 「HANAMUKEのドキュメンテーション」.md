@@ -9,6 +9,7 @@
 + [Log](#Log)
 + [Drop](#Drop)
 + [FindPath](#FindPath)
++ [IsTileReady](#IsTileReady)
   
 ---
 
@@ -54,3 +55,18 @@ Teleports to the best path to the destination.
 -- Example usage:
 FindPath(23,50)
 ```
+
+## IsTileReady
+```lua
+IsTileReady(int tilepos.x, int tilepos.y)
+```
+Checks if tree is ready to harvest or not. 
+```lua
+-- Example usage:
+xx = GetPos().x // 32
+yy = GetPos().y // 32
+
+IsTileReady(xx, yy)
+```
+
+
