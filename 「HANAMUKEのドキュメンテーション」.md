@@ -79,6 +79,6 @@ IsTileReady(xx, yy)
 | `name`| current Player name |
 | `world`| current world name |
 | `uid`     | Player's UsernameID |
-| `GetPos().x`| Tile X Position |
+| `GetPos().x`| Tile X Position |              
 | `GetPos().y`| Tile Y Position |
 
