@@ -73,5 +73,9 @@ IsTileReady(xx, yy)
 ```
 
 ---
-
-
+## **NetAvatar**
+| Type      | Description |
+| --------- | ----------- |
+| `uid`     | Player's UsernameID |
+| `GetPos().x`| Tile Position |
+| `GetPos().y`| Tile Position |
