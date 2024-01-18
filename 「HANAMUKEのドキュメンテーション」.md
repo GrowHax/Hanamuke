@@ -5,12 +5,39 @@
 </p>
 
 ## 📝 Functions [Documentation]
++ [SendPacket](#SendPacket)
++ [SendPacketRaw](#SendPacketRaw)  
 + [warp](#warp)
 + [Log](#Log)
 + [Drop](#Drop)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
-  
+---
+
+## SendPacket
+
+## SendPacketRaw
+```lua
+SendPacketRaw(pkt)
+```
+Send Packet to the server
+```lua
+-- Example Usage:
+function punch(x, y)
+    local pkt = GameUpdatePacket()
+    pkt.type = 3
+    pkt.int_data = 18
+    pkt.pos_x = GetPos().x
+    pkt.pos_y = GetPos().y
+    pkt.int_x = x
+    pkt.int_y = y
+    pkt.packet_flags = 2560
+    SendPacketRaw(pkt)
+end
+
+punch((GetPos().x // 32) + 1, (GetPos().y // 32))
+```
+
 ---
 
 ## warp
