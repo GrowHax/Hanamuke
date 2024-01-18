@@ -15,6 +15,12 @@
 ---
 
 ## SendPacket
+```lua
+SendPacket(2, "action|input\n|text|HELLO)
+```
+Sends a direct packet.
+
+---
 
 ## SendPacketRaw
 ```lua
