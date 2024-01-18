@@ -76,6 +76,9 @@ IsTileReady(xx, yy)
 ## **NetAvatar**
 | Type      | Description |
 | --------- | ----------- |
+| `name`| current Player name |
+| `world`| current world name |
 | `uid`     | Player's UsernameID |
-| `GetPos().x`| Tile Position |
-| `GetPos().y`| Tile Position |
+| `GetPos().x`| Tile X Position |
+| `GetPos().y`| Tile Y Position |
+
