@@ -67,7 +67,7 @@ warp("WORLD|DOORID")
 -- Example usage:
 Log("Hello There")
 ```
-This will print "Hello There" on to the console.
+This will print "Hello There" on to the game's console.
 
 ---
 
