@@ -16,10 +16,13 @@
 
 ## SendPacket
 ```lua
-SendPacket(2, "action|input\n|text|HELLO)
+SendPacket(int type, string action)
 ```
 Sends a direct packet.
-
+```lua
+-- Example Usage:
+SendPacket(2, "action|input\n|text|HELLO)
+```
 ---
 
 ## SendPacketRaw
