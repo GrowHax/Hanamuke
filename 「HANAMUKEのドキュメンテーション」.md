@@ -12,6 +12,9 @@
 + [Drop](#Drop)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
+
+ *Upcoming*
++ [SendWebhook](#SendWebhook)
 ---
 
 ## SendPacket
