@@ -29,7 +29,7 @@ SendPacket(2, "action|input\n|text|HELLO)
 ```lua
 SendPacketRaw(pkt)
 ```
-Send Packet to the server
+Send Raw Packet to the server
 ```lua
 -- Example Usage:
 function punch(x, y)
