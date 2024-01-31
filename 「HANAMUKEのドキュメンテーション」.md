@@ -12,9 +12,8 @@
 + [Drop](#Drop)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
-
- *Upcoming*
 + [SendWebhook](#SendWebhook)
+
 ---
 
 ## SendPacket
@@ -112,6 +111,19 @@ IsTileReady(xx, yy)
 ```
 
 ---
+
+## SendWebhook
+```lua
+SendWebhook(string message, string webhookurl)
+```
+Sends a message on Discord using Webhook.
+```lua
+--Example Usage:
+SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
+```
+
+---
+
 ## **NetAvatar**
 | Type      | Description |
 | --------- | ----------- |
