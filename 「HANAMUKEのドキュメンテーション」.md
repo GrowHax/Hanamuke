@@ -129,6 +129,7 @@ SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
 | --------- | ----------- |
 | `name`| current Player name |
 | `world`| current world name |
+| `netid`| Player's NetID |
 | `uid`     | Player's UsernameID |
 | `GetPos().x`| Tile X Position |              
 | `GetPos().y`| Tile Y Position |
