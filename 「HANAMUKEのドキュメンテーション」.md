@@ -9,6 +9,7 @@
 + [SendPacketRaw](#SendPacketRaw)  
 + [warp](#warp)
 + [Log](#Log)
++ [Sleep](#Sleep)
 + [Drop](#Drop)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
@@ -150,6 +151,20 @@ Logs all blocks in the world
 -- Example Usage:
 local blocks = GetTiles()
 Log(blocks.bg)
+```
+
+---
+
+## Sleep
+```lua
+Sleep(int millisecond)
+```
+Delays with Sleep
+```lua
+-- Example Usage:
+Log("Start script")
+Sleep(2000) -- delay 2 seconds
+Log("2 seconds later")
 ```
 
 ---
