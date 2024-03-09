@@ -14,6 +14,10 @@
 + [IsTileReady](#IsTileReady)
 + [SendWebhook](#SendWebhook)
 
+  (coming up)
++ [GetTile](#GetTile)
++ [GetTiles](#GetTiles)
+
 ---
 
 ## SendPacket
@@ -118,8 +122,34 @@ SendWebhook(string message, string webhookurl)
 ```
 Sends a message on Discord using Webhook.
 ```lua
---Example Usage:
+-- Example Usage:
 SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
+```
+
+---
+
+## GetTile
+```lua
+GetTile(int x, int y)
+```
+Returns world tile
+```lua
+-- Example Usage:
+local block = GetTile(52,60)
+Log(block.id)
+```
+
+---
+
+## GetTiles
+```lua
+GetTiles()
+```
+Logs all blocks in the world
+```lua
+-- Example Usage:
+local blocks = GetTiles()
+Log(blocks.bg)
 ```
 
 ---
@@ -131,6 +161,6 @@ SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
 | `world`| current world name |
 | `netid`| Player's NetID |
 | `uid`     | Player's UsernameID |
-| `GetPos().x`| Tile X Position |              
+| `GetPos().x`| Tile X Position |     
 | `GetPos().y`| Tile Y Position |
 
