@@ -18,7 +18,7 @@
   (coming up)
 + [GetTile](#GetTile)
 + [GetTiles](#GetTiles)
-
++ Support for objects
 ---
 
 ## SendPacket
@@ -177,5 +177,19 @@ Log("2 seconds later")
 | `netid`| Player's NetID |
 | `uid`     | Player's UsernameID |
 | `GetPos().x`| Tile X Position |     
-| `GetPos().y`| Tile Y Position |
+| `GetPos().y`| Tile Y Position 
+
+## **Tile**
+| Type      | Description |
+| --------- | ----------- |
+| `id`| Tile itemid |
+| `x`| Tile's X position |
+| `y`| Tile's Y position |
+| `fg`| Tile foreground |
+| `bg`| Tile background |
+
+(coming soon)
+| `obj`| objects on tile |
+
+
 
