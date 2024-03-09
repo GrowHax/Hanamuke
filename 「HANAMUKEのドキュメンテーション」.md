@@ -18,6 +18,8 @@
   (coming up)
 + [GetTile](#GetTile)
 + [GetTiles](#GetTiles)
++ [AddCallback](#AddCallback)
++ [RemoveCallbacks](#RemoveCallbacks)
 + Support for objects
 ---
 
@@ -149,8 +151,8 @@ GetTiles()
 Logs all blocks in the world
 ```lua
 -- Example Usage:
-local blocks = GetTiles()
-Log(blocks.bg)
+local tiles = GetTiles()
+Log(tiles.bg)
 ```
 
 ---
