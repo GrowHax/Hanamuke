@@ -179,7 +179,7 @@ Log("2 seconds later")
 | `netid`| Player's NetID |
 | `uid`     | Player's UsernameID |
 | `GetPos().x`| Tile X Position |     
-| `GetPos().y`| Tile Y Position 
+| `GetPos().y`| Tile Y Position |
 
 ## **Tile**
 | Type      | Description |
@@ -193,6 +193,3 @@ Log("2 seconds later")
 (coming soon)
 
 | `obj`| objects on tile |
-
-
-
