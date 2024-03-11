@@ -7,7 +7,7 @@
 ## 📝 Functions [Documentation]
 + [Drop](#Drop)
 + [FindPath](#FindPath)
-+ [GetTileData](#GetTileData)
++ [GetTile](#GetTile)
 + [IsTileReady](#IsTileReady)
 + [Log](#Log)
 + [place](#place)
@@ -162,11 +162,14 @@ SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
 ```lua
 GetTile(int x, int y)
 ```
-Returns world tile
+Gives information about a Tile
 ```lua
 -- Example Usage:
-local block = GetTile(52,60)
-Log(block.id)
+local xx = GetPos().x // 32
+local yy = GetPos().y // 32
+local tile = GetTile(xx,yy)
+print("Foreground:", tile.fg)
+print("Background:", tile.bg)
 ```
 
 ---
@@ -180,22 +183,6 @@ Logs all blocks in the world
 -- Example Usage:
 local tiles = GetTiles()
 Log(tiles.bg)
-```
-
----
-
-## GetTileData
-```lua
-GetTileData(int x, int y)
-```
-Gives extra information about a Tile
-```lua
--- Example Usage:
-local xx = GetPos().x // 32
-local yy = GetPos().y // 32
-local tile = GetTileData(xx,yy)
-print("Foreground:", tile.fg)
-print("Background:", tile.bg)
 ```
 
 ---
