@@ -11,6 +11,8 @@
 + [Log](#Log)
 + [Sleep](#Sleep)
 + [Drop](#Drop)
++ [punch](#punch)
++ [place](#place)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
 + [SendWebhook](#SendWebhook)
@@ -67,6 +69,30 @@ warp with DoorID is as follow.
 ```lua
 -- Example usage:
 warp("WORLD|DOORID")
+```
+
+---
+
+## punch
+```lua
+punch(int x, int y)
+```
+A shortcut (using GetPos) for punch
+```lua
+-- Example usage:
+punch(1, 0)
+```
+
+---
+
+## place
+```lua
+place(int x, int y, int int_data)
+```
+A shortcut (using GetPos) for place
+```lua
+-- Example usage:
+place(1, 0, 2)
 ```
 
 ---
