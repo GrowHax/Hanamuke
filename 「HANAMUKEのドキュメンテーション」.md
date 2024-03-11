@@ -5,17 +5,17 @@
 </p>
 
 ## 📝 Functions [Documentation]
-+ [SendPacket](#SendPacket)
-+ [SendPacketRaw](#SendPacketRaw)  
-+ [warp](#warp)
-+ [Log](#Log)
-+ [Sleep](#Sleep)
 + [Drop](#Drop)
-+ [punch](#punch)
-+ [place](#place)
 + [FindPath](#FindPath)
 + [IsTileReady](#IsTileReady)
++ [Log](#Log)
++ [place](#place)
++ [punch](#punch)
++ [SendPacket](#SendPacket)
++ [SendPacketRaw](#SendPacketRaw)  
 + [SendWebhook](#SendWebhook)
++ [Sleep](#Sleep)
++ [warp](#warp)
 
   (coming up)
 + [GetTile](#GetTile)
