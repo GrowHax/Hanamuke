@@ -7,6 +7,7 @@
 ## 📝 Functions [Documentation]
 + [Drop](#Drop)
 + [FindPath](#FindPath)
++ [GetTileData](#GetTileData)
 + [IsTileReady](#IsTileReady)
 + [Log](#Log)
 + [place](#place)
@@ -179,6 +180,22 @@ Logs all blocks in the world
 -- Example Usage:
 local tiles = GetTiles()
 Log(tiles.bg)
+```
+
+---
+
+## GetTileData
+```lua
+GetTileData(int x, int y)
+```
+Gives extra information about a Tile
+```lua
+-- Example Usage:
+local xx = GetPos().x // 32
+local yy = GetPos().y // 32
+local tile = GetTileData(xx,yy)
+print("Foreground:", tile.fg)
+print("Background:", tile.bg)
 ```
 
 ---
