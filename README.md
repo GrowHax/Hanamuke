@@ -3,7 +3,7 @@
 <h1 align="center">HANAMUKE INTERNAL</h1>
 <p align="center">This internal will be published for testing soon.</p>
 
-## 📝 Functions [Documentation]
+## Functions [Documentation]
 + [Log](#Log)
 + [Punch](#pPunch)
 + [Place](#Place)
