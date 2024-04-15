@@ -97,15 +97,15 @@ This will print "Hello There" on the game's console.
 
 ---
 
-## Sleep
+## sleep
 ```lua
-Sleep(int millisecond)
+sleep(int millisecond)
 ```
 Delays with Sleep
 ```lua
 -- Example Usage:
 Log("Start script")
-Sleep(2000) -- delay 2 seconds
+sleep(2000) -- delay 2 seconds
 Log("2 seconds later")
 ```
 
