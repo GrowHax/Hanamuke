@@ -11,6 +11,7 @@
 + [SendPacketRaw](#SendPacketRaw)  
 + [sleep](#sleep)
 + [warp](#warp)
++ [GetTile](#GetTile)
 
 ---
 
@@ -107,6 +108,27 @@ Delays with Sleep
 Log("Start script")
 sleep(2000) -- delay 2 seconds
 Log("2 seconds later")
+```
+
+---
+
+## GetTile
+```lua
+GetTile(int x, int y)
+```
+Retrieve (additional) information from a specific tile.
+```lua
+-- Example Usage (In the way of debugging on current player pos):
+local player = GetLocal()
+if player ~= nil then
+    local tile = GetTile(player.pixel_pos.x, player.pixel_pos.y)
+    if tile ~= nil then
+        print("Foreground:", tile.fg)
+        print("Background:", tile.bg)
+    else
+        print("Tile not found at position (" .. player.tile_pos.x .. ", " .. player.tile_pos.y .. ")")
+    end
+end
 ```
 
 ---
