@@ -46,7 +46,7 @@ function punch(x, y)
   SendPacketRaw(pkt)
 end
 
-punch(1,0)
+Punch(1,0)
 ```
 
 ---
