@@ -6,7 +6,7 @@
 
 ## 📝 Functions [Documentation]
 + [Log](#Log)
-+ [punch](#punch)
++ [Punch](#punch)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
 + [Sleep](#Sleep)
