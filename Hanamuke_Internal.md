@@ -1,6 +1,7 @@
 ---
 
 <h1 align="center"> HANAMUKE INTERNAL
+    This internal will get published for a test in the near future.
     <br> 
 </p>
 
