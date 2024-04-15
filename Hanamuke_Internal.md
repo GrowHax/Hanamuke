@@ -1,9 +1,7 @@
 ---
 
-<h1 align="center"> HANAMUKE INTERNAL
-    This internal will get published for a test in the near future.
-    <br> 
-</p>
+<h1 align="center">HANAMUKE INTERNAL</h1>
+<p align="center">This internal will be published for testing soon.</p>
 
 ## 📝 Functions [Documentation]
 + [Log](#Log)
@@ -122,7 +120,7 @@ Log("2 seconds later")
 | `uid`     | Player's UsernameID |
 | `tile_pos.x`| Tile X Position |     
 | `tile_pos.y`| Tile Y Position |
-| `pixel_pos.y`| Pixel X Position |
+| `pixel_pos.x`| Pixel X Position |
 | `pixel_pos.y`| Pixel Y Position |
 
 
