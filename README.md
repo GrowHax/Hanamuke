@@ -40,13 +40,13 @@ function punch(x, y)
       pos_x = GetLocal() .pixel_pos.x,
       pos_y = GetLocal() .pixel_pos.y,
       int_x = GetLocal() .tile_pos.x + x,
-      int_y = GetLocal() .tile_pos.y - y,
+      int_y = GetLocal() .tile_pos.y + y,
       flags = 2560
   }
   SendPacketRaw(pkt)
 end
 
-Punch(1,0)
+punch(1,0)
 ```
 
 ---
