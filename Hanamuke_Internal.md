@@ -37,10 +37,10 @@ function punch(x, y)
   local pkt = {
       type = 3,
       int_data = 18,
-      pos_x = player.pixel_pos.x,
-      pos_y = player.pixel_pos.y,
-      int_x = player.tile_pos.x + 1,
-      int_y = player.tile_pos.y - 0,
+      pos_x = GetLocal() .pixel_pos.x,
+      pos_y = GetLocal() .pixel_pos.y,
+      int_x = GetLocal() .tile_pos.x + 1,
+      int_y = GetLocal() .tile_pos.y - 0,
       flags = 2560
   }
   SendPacketRaw(pkt)
