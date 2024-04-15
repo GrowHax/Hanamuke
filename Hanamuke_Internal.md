@@ -39,8 +39,8 @@ function punch(x, y)
       int_data = 18,
       pos_x = GetLocal() .pixel_pos.x,
       pos_y = GetLocal() .pixel_pos.y,
-      int_x = GetLocal() .tile_pos.x + 1,
-      int_y = GetLocal() .tile_pos.y - 0,
+      int_x = GetLocal() .tile_pos.x + x,
+      int_y = GetLocal() .tile_pos.y - y,
       flags = 2560
   }
   SendPacketRaw(pkt)
