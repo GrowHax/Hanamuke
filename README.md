@@ -123,8 +123,8 @@ local player = GetLocal()
 if player ~= nil then
     local tile = GetTile(player.pixel_pos.x, player.pixel_pos.y)
     if tile ~= nil then
-        print("Foreground:", tile.fg)
-        print("Background:", tile.bg)
+        print("Foreground:", tile.fg) -- retrives itemid for the foreground
+        print("Background:", tile.bg) -- retrieves itemid for the background
     else
         print("Tile not found at position (" .. player.tile_pos.x .. ", " .. player.tile_pos.y .. ")")
     end
