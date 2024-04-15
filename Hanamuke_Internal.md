@@ -6,7 +6,8 @@
 
 ## 📝 Functions [Documentation]
 + [Log](#Log)
-+ [Punch](#punch)
++ [Punch](#pPunch)
++ [Place](#Place)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
 + [Sleep](#Sleep)
@@ -64,9 +65,9 @@ warp("WORLD|DOORID")
 
 ---
 
-## punch
+## Punch
 ```lua
-punch(int x, int y)
+Punch(int x, int y)
 ```
 A shortcut (using GetLocal()) for punch
 ```lua
@@ -76,14 +77,14 @@ Punch(1, 0)
 
 ---
 
-## place
+## Place
 ```lua
-place(int x, int y, int int_data)
+Place(int x, int y, int int_data)
 ```
 A shortcut (using GetPos) for place
 ```lua
 -- Example usage:
-place(1, 0, 2)
+Place(1, 0, 2)
 ```
 
 ---
@@ -93,7 +94,7 @@ place(1, 0, 2)
 -- Example usage:
 Log("Hello There")
 ```
-This will print "Hello There" on to the game's console.
+This will print "Hello There" on the game's console.
 
 ---
 
@@ -118,11 +119,14 @@ Log("2 seconds later")
 | `world`| current world name |
 | `netid`| Player's NetID |
 | `uid`     | Player's UsernameID |
-| `GetPos().x`| Tile X Position |     
-| `GetPos().y`| Tile Y Position |
+| `tile_pos.x`| Tile X Position |     
+| `tile_pos.y`| Tile Y Position |
+| `pixel_pos.y`| Pixel Y Position |
+| `pixel_pos.y`| Pixel Y Position |
+
 
 ## **Tile**
 | Type      | Description |
 | --------- | ----------- |
-| `x`| Tile's X position |
-| `y`| Tile's Y position |
+| `fg`| Foreground |
+| `bg`| Background |
