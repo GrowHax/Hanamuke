@@ -121,7 +121,7 @@ Log("2 seconds later")
 | `uid`     | Player's UsernameID |
 | `tile_pos.x`| Tile X Position |     
 | `tile_pos.y`| Tile Y Position |
-| `pixel_pos.y`| Pixel Y Position |
+| `pixel_pos.y`| Pixel X Position |
 | `pixel_pos.y`| Pixel Y Position |
 
 
