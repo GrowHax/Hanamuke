@@ -9,7 +9,7 @@
 + [Place](#Place)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
-+ [Sleep](#Sleep)
++ [sleep](#sleep)
 + [warp](#warp)
 
 ---
