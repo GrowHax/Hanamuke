@@ -139,11 +139,9 @@ end
 | `name`| current Player name |
 | `world`| current world name |
 | `netid`| Player's NetID |
-| `uid`     | Player's UsernameID |
-| `tile_pos.x`| Tile X Position |     
-| `tile_pos.y`| Tile Y Position |
-| `pixel_pos.x`| Pixel X Position |
-| `pixel_pos.y`| Pixel Y Position |
+| `uid`| Player's UsernameID |
+| `pos_x`| Pixel X Position |     
+| `pos_y`| Pixel Y Position |
 
 
 ## **Tile**
