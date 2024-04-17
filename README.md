@@ -38,10 +38,10 @@ function punch(x, y)
   local pkt = {
       type = 3,
       int_data = 18,
-      pos_x = GetLocal() .pixel_pos.x,
-      pos_y = GetLocal() .pixel_pos.y,
-      int_x = GetLocal() .tile_pos.x + x,
-      int_y = GetLocal() .tile_pos.y + y,
+      pos_x = GetLocal() .pos_x,
+      pos_y = GetLocal() .pos_y,
+      int_x = GetLocal() .pos_x // 32 + x,
+      int_y = GetLocal() .pos_y // 32 + y,
       flags = 2560
   }
   SendPacketRaw(pkt)
@@ -121,12 +121,12 @@ Retrieve (additional) information from a specific tile.
 -- Example Usage (In the way of debugging on current player pos):
 local player = GetLocal()
 if player ~= nil then
-    local tile = GetTile(player.pixel_pos.x, player.pixel_pos.y)
+    local tile = GetTile(player.pos_x, player.pos_y)
     if tile ~= nil then
         print("Foreground:", tile.fg) -- retrives itemid for the foreground
         print("Background:", tile.bg) -- retrieves itemid for the background
     else
-        print("Tile not found at position (" .. player.tile_pos.x .. ", " .. player.tile_pos.y .. ")")
+        print("Tile not found at position (" .. player.pos_x // 32 .. ", " .. player.pos_y // 32 .. ")")
     end
 end
 ```
