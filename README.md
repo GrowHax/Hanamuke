@@ -142,7 +142,7 @@ end
 | `uid`| Player's UsernameID |
 | `pos_x`| Pixel X Position |     
 | `pos_y`| Pixel Y Position |
-
+| `facing_left`| Returns true when player is facing left |
 
 ## **Tile**
 | Type      | Description |
