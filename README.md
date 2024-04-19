@@ -137,7 +137,7 @@ end
 | Type      | Description |
 | --------- | ----------- |
 | `name`| Player name |
-| `world`| World name |
+| `country`| Country name |
 | `netid`| Player's NetID |
 | `uid`| Player's UsernameID |
 | `pos_x`| Pixel X Position |     
