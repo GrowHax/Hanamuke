@@ -136,8 +136,8 @@ end
 ## **NetAvatar**
 | Type      | Description |
 | --------- | ----------- |
-| `name`| current Player name |
-| `world`| current world name |
+| `name`| Player name |
+| `world`| World name |
 | `netid`| Player's NetID |
 | `uid`| Player's UsernameID |
 | `pos_x`| Pixel X Position |     
