@@ -182,4 +182,5 @@ end
 | `pos_x`| Pixel X Position |     
 | `pos_y`| Pixel Y Position |
 | `flags`| Flags |
+| `obj_id`| (This is just a indicator for objects) |
 
