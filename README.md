@@ -12,7 +12,7 @@
 + [sleep](#sleep)
 + [warp](#warp)
 + [GetTile](#GetTile)
-
++ [getObjects](#getObjects)
 ---
 
 ## SendPacket
@@ -133,6 +133,30 @@ end
 
 ---
 
+## getObjects
+```lua
+getObjects()
+```
+Returns information about the objects in the world.
+```lua
+-- Example Usage:
+local obj = getObjects()
+
+if obj then
+    for i, obj in ipairs(obj) do
+        print("  Position X: " .. obj.pos_x // 32)
+        print("  Position Y: " .. obj.pos_y // 32)
+        print("  Item ID: " .. obj.id)
+        print("  Count: " .. obj.count)
+        print("---------------")
+    end
+else
+    print("No world objects found.")
+end
+```
+
+---
+
 ## **NetAvatar**
 | Type      | Description |
 | --------- | ----------- |
@@ -149,3 +173,13 @@ end
 | --------- | ----------- |
 | `fg`| Foreground |
 | `bg`| Background |
+
+## **Objects**
+| Type      | Description |
+| --------- | ----------- |
+| `id`| ItemID |
+| `count`| Amount (stacked) |
+| `pos_x`| Pixel X Position |     
+| `pos_y`| Pixel Y Position |
+| `flags`| Flags |
+
