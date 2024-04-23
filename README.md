@@ -4,12 +4,12 @@
 <p align="center">This internal will be published for testing soon.</p>
 
 ## Functions [Documentation]
-+ [Log](#Log)
++ [log](#log)
 + [Punch](#pPunch)
 + [Place](#Place)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
-+ [sleep](#sleep)
++ [Sleep](#Sleep)
 + [warp](#warp)
 + [GetTile](#GetTile)
 + [getObjects](#getObjects)
@@ -89,25 +89,25 @@ Place(1, 0, 2)
 
 ---
 
-## Log
+## log
 ```lua
 -- Example usage:
-Log("Hello There")
+log("Hello There")
 ```
 This will print "Hello There" on the game's console.
 
 ---
 
-## sleep
+## Sleep
 ```lua
-sleep(int millisecond)
+Sleep(int millisecond)
 ```
 Delays with Sleep
 ```lua
 -- Example Usage:
-Log("Start script")
-sleep(2000) -- delay 2 seconds
-Log("2 seconds later")
+log("Start script")
+Sleep(2000) -- delay 2 seconds
+log("2 seconds later")
 ```
 
 ---
@@ -121,12 +121,12 @@ Retrieve (additional) information from a specific tile.
 -- Example Usage (In the way of debugging on current player pos):
 local player = GetLocal()
 if player ~= nil then
-    local tile = GetTile(player.pos_x, player.pos_y)
+    local tile = GetTile(player.pos_x // 32, player.pos_y // 32)
     if tile ~= nil then
         print("Foreground:", tile.fg) -- retrives itemid for the foreground
         print("Background:", tile.bg) -- retrieves itemid for the background
     else
-        print("Tile not found at position (" .. player.pos_x // 32 .. ", " .. player.pos_y // 32 .. ")")
+        print("Tile not found at position (" .. player.pos_x .. ", " .. player.pos_y .. ")")
     end
 end
 ```
