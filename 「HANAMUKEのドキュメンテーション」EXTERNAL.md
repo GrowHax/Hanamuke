@@ -20,6 +20,7 @@
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
 + [GetObjects](#GetObjects)
++ [GetInventory](#GetInventory)
 ---
 
 ## SendPacket
@@ -87,6 +88,17 @@ Dropping 10 blocks of dirt.
 ```lua
 -- Example usage:
 Drop(2, 10)
+```
+
+---
+
+## GetInventory
+```lua
+GetInventory()
+```
+Returns information from inventory using the `Inventory` table.
+```lua
+
 ```
 
 ---
@@ -200,16 +212,16 @@ Returns objects from the `Object` table
 ---
 
 ## **NetAvatar**
-| Key      | Description |
-| --------- | ----------- |
-| `name`| Player name |
-| `world`| World name |
-| `netid`| Player NetID |
-| `uid`| Player UsernameID |
-| `pos_x`| X Position |     
-| `pos_y`| Y Position |
-| `facing_left`| Return true when player is facing left |
-| `country`| country id |
+| Key      | Type   | Description                 |
+|----------|--------|-----------------------------|
+| `name`   | string | Player name (Local) |
+| `world`  | string | World name (Local) |
+| `netid`  | number | Player NetID |
+| `uid`    | number | Player UsernameID |
+| `pos_x`  | number | X Position |
+| `pos_y`  | number | Y Position |
+| `facing_left` | boolean | Return true if facing left |
+| `country`| number  | country id |
 
 ## **Tile**
 | Key      | Description |
