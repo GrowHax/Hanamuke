@@ -211,8 +211,6 @@ Returns objects from the `Object` table
 
 ---
 
-
-
 ## **NetAvatar**
 | Key      | Type   | Description                 |
 |----------|--------|-----------------------------|
@@ -226,13 +224,13 @@ Returns objects from the `Object` table
 | `country`| number  | country id |
 
 ## **Tile**
-| Key      | Description |
-| --------- | ----------- |
-| `id`| Tile itemid |
-| `pos_x`| Tile's X position |
-| `pos_y`| Tile's Y position |
-| `fg`| Tile foreground |
-| `bg`| Tile background |
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `id`      | number   | Tile itemid |
+| `pos_x`   | number   | Tile's X position |
+| `pos_y`   | number   | Tile's Y position |
+| `fg`      | string   | Tile foreground |
+| `bg`      | string   | Tile background |
 
 ## **Object**
 | Key   | Type   | Description                 |
