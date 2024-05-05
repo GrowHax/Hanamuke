@@ -244,12 +244,12 @@ Returns objects from the `Object` table
 ## **NetAvatar**
 | Key      | Description |
 | --------- | ----------- |
-| `name`| current Player name |
-| `world`| current world name |
-| `netid`| Player's NetID |
-| `uid`| Player's UsernameID |
-| `pos_x`| Tile X Position |     
-| `pos_y`| Tile Y Position |
+| `name`| Player name |
+| `world`| World name |
+| `netid`| Player NetID |
+| `uid`| Player UsernameID |
+| `pos_x`| X Position |     
+| `pos_y`| Y Position |
 
 ## **Tile**
 | Key      | Description |
@@ -263,9 +263,9 @@ Returns objects from the `Object` table
 ## **Object**
 | Key   | Type   | Description                 |
 |-------|--------|-----------------------------|
-| `pos_x`   | number | X position of the object    |
-| `pos_y`   | number | Y position of the object    |
-| `id`  | number | Item ID of the object       |
-| `object_id` | number  | Returns object id        |
-| `flags` | number  | Returns object flags        |
-| `count` | number  | Returns object count        |
+| `pos_x`   | number | X position of the object |
+| `pos_y`   | number | Y position of the object |
+| `id`  | number | Item ID of the object |
+| `object_id` | number  | Returns object id |
+| `flags` | number  | flags of object |
+| `count` | number  | object count (amount) |
