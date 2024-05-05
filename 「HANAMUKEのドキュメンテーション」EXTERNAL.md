@@ -18,13 +18,11 @@
 + [Sleep](#Sleep)
 + [warp](#warp)
 + [SendVarlist](#SendVarlist)
-
-  (coming up)
 + [GetTile](#GetTile)
 + [GetTiles](#GetTiles)
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
-+ Support for objects
++ [GetObjects](#GetObjects)
 ---
 
 ## SendPacket
@@ -179,7 +177,7 @@ print("Background:", tile.bg)
 ```lua
 GetTiles()
 ```
-Logs all blocks in the world
+Logs all blocks in the world.
 ```lua
 -- Example Usage:
 local tiles = GetTiles()
@@ -200,6 +198,8 @@ Sleep(2000) -- delay 2 seconds
 Log("2 seconds later")
 ```
 
+---
+
 ## SendVarlist
 ```lua
 local vartable = {}
@@ -216,32 +216,51 @@ if GetLocal().name ~= "NULL" then
     var[1] = "interface/atomic_button.rttex"
     var[2] = "Warning from `4System`0: You've been `4BANNED`0 from Growtopia for 730 days"
     var[3] = "audio/hub_open.wav"
-    var.netid = -1
+    var.netid = -1 -- must be set otherwise it won't work
     SendVarlist(var)
 end
 ```
 
 ---
 
+## AddCallback
+```lua
+```
+Adds a Lua function to be called when a specific event occurs in the game.
+
+## RemoveCallbacks
+```lua
+RemoveCallbacks()
+```
+Removes all Lua functions that were added with `AddCallback`.
+
+---
+
 ## **NetAvatar**
-| Type      | Description |
+| Key      | Description |
 | --------- | ----------- |
 | `name`| current Player name |
 | `world`| current world name |
 | `netid`| Player's NetID |
-| `uid`     | Player's UsernameID |
-| `GetPos().x`| Tile X Position |     
-| `GetPos().y`| Tile Y Position |
+| `uid`| Player's UsernameID |
+| `pos_x`| Tile X Position |     
+| `pos_y`| Tile Y Position |
 
 ## **Tile**
-| Type      | Description |
+| Key      | Description |
 | --------- | ----------- |
 | `id`| Tile itemid |
-| `x`| Tile's X position |
-| `y`| Tile's Y position |
+| `pos_x`| Tile's X position |
+| `pos_y`| Tile's Y position |
 | `fg`| Tile foreground |
 | `bg`| Tile background |
 
-(coming soon)
-
-| `obj`| objects on tile |
+## **Object**
+| Key   | Type   | Description                 |
+|-------|--------|-----------------------------|
+| `pos_x`   | number | X position of the object    |
+| `pos_y`   | number | Y position of the object    |
+| `id`  | number | Item ID of the object       |
+| `object_id` | number  | Returns object id        |
+| `flags` | number  | Returns object flags        |
+| `count` | number  | Returns object count        |
