@@ -181,7 +181,7 @@ SendVarlist(vartable)
 Sends varlist to the client
 ```lua
 -- Example Usage:
-if GetLocal().name ~= "NULL" then
+if GetLocal().name ~= nil then
     
     local me = GetLocal()
     local var = {}
