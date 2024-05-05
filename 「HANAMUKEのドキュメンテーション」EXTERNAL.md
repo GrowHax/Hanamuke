@@ -122,8 +122,8 @@ GetTile(int x, int y)
 Gives information about a Tile
 ```lua
 -- Example Usage:
-local xx = GetPos().x // 32
-local yy = GetPos().y // 32
+local xx = GetLocal().x // 32
+local yy = GetLocal().y // 32
 local tile = GetTile(xx,yy)
 print("Foreground:", tile.fg)
 print("Background:", tile.bg)
@@ -135,7 +135,7 @@ print("Background:", tile.bg)
 ```lua
 GetTiles()
 ```
-Logs all blocks in the world.
+Logs all tiles in the world.
 ```lua
 -- Example Usage:
 local tiles = GetTiles()
@@ -208,6 +208,8 @@ Returns objects from the `Object` table
 | `uid`| Player UsernameID |
 | `pos_x`| X Position |     
 | `pos_y`| Y Position |
+| `facing_left`| Return true when player is facing left |
+| `country`| country id |
 
 ## **Tile**
 | Key      | Description |
