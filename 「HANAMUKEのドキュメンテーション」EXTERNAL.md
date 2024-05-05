@@ -5,22 +5,25 @@
 </p>
 
 ## 📝 Functions [Documentation]
-+ [Drop](#Drop)
 + [FindPath](#FindPath)
 + [GetTile](#GetTile)
-+ [Log](#Log)
++ [log](#log)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
-+ [SendWebhook](#SendWebhook)
 + [Sleep](#Sleep)
-+ [warp](#warp)
 + [SendVarlist](#SendVarlist)
 + [GetTile](#GetTile)
 + [GetTiles](#GetTiles)
-+ [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
 + [GetObjects](#GetObjects)
 + [GetInventory](#GetInventory)
+
+# Unfinished docs:
++ [GetIteminfo](#GetIteminfo)
++ [AddCallback](#AddCallback)
++ [SendWebhook](#SendWebhook)
++ [warp](#warp)
++ [Drop](#Drop)
 ---
 
 ## SendPacket
