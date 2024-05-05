@@ -236,6 +236,11 @@ Removes all Lua functions that were added with `AddCallback`.
 
 ---
 
+## GetObjects
+Returns objects from the `Object` table
+
+---
+
 ## **NetAvatar**
 | Key      | Description |
 | --------- | ----------- |
