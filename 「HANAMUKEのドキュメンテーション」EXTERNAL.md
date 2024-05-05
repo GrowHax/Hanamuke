@@ -241,3 +241,15 @@ Returns objects from the `Object` table
 | `object_id` | number  | Returns object id |
 | `flags` | number  | flags of object |
 | `count` | number  | object count (amount) |
+
+## **VarTable**
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `netid`   | number   | NetID |
+| `delay`   | number   | Delay |
+| `[0]`     | string   | Var case/function |
+| `[1]`     | Any      | Param 1 |
+| `[2]`     | Any      | Param 2 |
+| `[3]`     | Any      | Param 3 |
+| `[4]`     | Any      | Param 4 |
+| `[5]`     | Any      | Param 5 |
