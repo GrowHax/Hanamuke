@@ -8,10 +8,7 @@
 + [Drop](#Drop)
 + [FindPath](#FindPath)
 + [GetTile](#GetTile)
-+ [IsTileReady](#IsTileReady)
 + [Log](#Log)
-+ [place](#place)
-+ [punch](#punch)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
 + [SendWebhook](#SendWebhook)
@@ -73,36 +70,12 @@ warp("WORLD|DOORID")
 
 ---
 
-## punch
-```lua
-punch(int x, int y)
-```
-A shortcut (using GetPos) for punch
+## log
 ```lua
 -- Example usage:
-punch(1, 0)
+log("Hello There")
 ```
-
----
-
-## place
-```lua
-place(int x, int y, int int_data)
-```
-A shortcut (using GetPos) for place
-```lua
--- Example usage:
-place(1, 0, 2)
-```
-
----
-
-## Log
-```lua
--- Example usage:
-Log("Hello There")
-```
-This will print "Hello There" on to the game's console.
+Prints on to the game's console.
 
 ---
 
@@ -122,25 +95,10 @@ Drop(2, 10)
 ```lua
 FindPath(int x, int y)
 ```
-Teleports to the best path to the destination.
+Teleports with the best path to the destination.
 ```lua
 -- Example usage:
 FindPath(23,50)
-```
-
----
-
-## IsTileReady
-```lua
-IsTileReady(int tilepos.x, int tilepos.y)
-```
-Checks if tree is ready to harvest or not. 
-```lua
--- Example usage:
-xx = GetPos().x // 32
-yy = GetPos().y // 32
-
-IsTileReady(xx, yy)
 ```
 
 ---
