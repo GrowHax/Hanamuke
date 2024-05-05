@@ -4,16 +4,26 @@
 <p align="center">This internal will be published for testing soon.</p>
 <p align="center">Will most likely give a release date on my Discord server<a href="https://discord.gg/SES9tgHEHE" target="_blank"> Join here</a></p>
 
-## Functions [Documentation]
+## 📝 Functions [Documentation]
++ [FindPath](#FindPath)
++ [GetTile](#GetTile)
 + [log](#log)
-+ [Punch](#pPunch)
-+ [Place](#Place)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
 + [Sleep](#Sleep)
-+ [warp](#warp)
++ [SendVarlist](#SendVarlist)
 + [GetTile](#GetTile)
-+ [getObjects](#getObjects)
++ [GetTiles](#GetTiles)
++ [RemoveCallbacks](#RemoveCallbacks)
++ [GetObjects](#GetObjects)
++ [GetInventory](#GetInventory)
+
+# Unfinished docs:
++ [GetIteminfo](#GetIteminfo)
++ [AddCallback](#AddCallback)
++ [SendWebhook](#SendWebhook)
++ [warp](#warp)
++ [Drop](#Drop)
 ---
 
 ## SendPacket
@@ -25,7 +35,6 @@ Sends a direct packet.
 -- Example Usage:
 SendPacket(2, "action|input\n|text|HELLO)
 ```
-
 ---
 
 ## SendPacketRaw
@@ -36,19 +45,18 @@ Send Raw Packet to the server
 ```lua
 -- Example Usage:
 function punch(x, y)
-  local pkt = {
-      type = 3,
-      int_data = 18,
-      pos_x = GetLocal() .pos_x,
-      pos_y = GetLocal() .pos_y,
-      int_x = GetLocal() .pos_x // 32 + x,
-      int_y = GetLocal() .pos_y // 32 + y,
-      flags = 2560
-  }
-  SendPacketRaw(pkt)
+    local pkt = GameUpdatePacket()
+    pkt.type = 3
+    pkt.int_data = 18
+    pkt.pos_x = GetPos().x
+    pkt.pos_y = GetPos().y
+    pkt.int_x = x
+    pkt.int_y = y
+    pkt.packet_flags = 2560
+    SendPacketRaw(pkt)
 end
 
-punch(1,0)
+punch((GetPos().x // 32) + 1, (GetPos().y // 32))
 ```
 
 ---
@@ -66,36 +74,88 @@ warp("WORLD|DOORID")
 
 ---
 
-## Punch
-```lua
-Punch(int x, int y)
-```
-A shortcut (using GetLocal()) for punch
-```lua
--- Example usage:
-Punch(1, 0)
-```
-
----
-
-## Place
-```lua
-Place(int x, int y, int int_data)
-```
-A shortcut (using GetPos) for place
-```lua
--- Example usage:
-Place(1, 0, 2)
-```
-
----
-
 ## log
 ```lua
 -- Example usage:
 log("Hello There")
 ```
-This will print "Hello There" on the game's console.
+Prints on to the game's console.
+
+---
+
+## Drop
+```lua
+Drop(itemid, amount)
+```
+Dropping 10 blocks of dirt.
+```lua
+-- Example usage:
+Drop(2, 10)
+```
+
+---
+
+## GetInventory
+```lua
+GetInventory()
+```
+Returns information from inventory using the `Inventory` table.
+```lua
+
+```
+
+---
+
+## FindPath
+```lua
+FindPath(int x, int y)
+```
+Teleports with the best path to the destination.
+```lua
+-- Example usage:
+FindPath(23,50)
+```
+
+---
+
+## SendWebhook
+```lua
+SendWebhook(string message, string webhookurl)
+```
+Sends a message on Discord using Webhook.
+```lua
+-- Example Usage:
+SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
+```
+
+---
+
+## GetTile
+```lua
+GetTile(int x, int y)
+```
+Gives information about a Tile
+```lua
+-- Example Usage:
+local xx = GetLocal().x // 32
+local yy = GetLocal().y // 32
+local tile = GetTile(xx,yy)
+print("Foreground:", tile.fg)
+print("Background:", tile.bg)
+```
+
+---
+
+## GetTiles
+```lua
+GetTiles()
+```
+logs all tiles in the world.
+```lua
+-- Example Usage:
+local tiles = GetTiles()
+log(tiles.bg)
+```
 
 ---
 
@@ -113,75 +173,86 @@ log("2 seconds later")
 
 ---
 
-## GetTile
+## SendVarlist
 ```lua
-GetTile(int x, int y)
+local vartable = {}
+SendVarlist(vartable)
 ```
-Retrieve (additional) information from a specific tile.
+Sends varlist to the client
 ```lua
--- Example Usage (In the way of debugging on current player pos):
-local player = GetLocal()
-if player ~= nil then
-    local tile = GetTile(player.pos_x // 32, player.pos_y // 32)
-    if tile ~= nil then
-        print("Foreground:", tile.fg) -- retrives itemid for the foreground
-        print("Background:", tile.bg) -- retrieves itemid for the background
-    else
-        print("Tile not found at position (" .. player.pos_x .. ", " .. player.pos_y .. ")")
-    end
+-- Example Usage:
+if GetLocal().name ~= "NULL" then
+    
+    local me = GetLocal()
+    local var = {}
+    var[0] = "OnAddNotification"
+    var[1] = "interface/atomic_button.rttex"
+    var[2] = "Warning from `4System`0: You've been `4BANNED`0 from Growtopia for 730 days"
+    var[3] = "audio/hub_open.wav"
+    var.netid = -1 -- must be set otherwise it won't work
+    SendVarlist(var)
 end
 ```
 
 ---
 
-## getObjects
+## AddCallback
 ```lua
-getObjects()
 ```
-Returns information about the objects in the world.
-```lua
--- Example Usage:
-local obj = getObjects()
+Adds a Lua function to be called when a specific event occurs in the game.
 
-if obj then
-    for i, obj in ipairs(obj) do
-        print("  Position X: " .. obj.pos_x // 32)
-        print("  Position Y: " .. obj.pos_y // 32)
-        print("  Item ID: " .. obj.id)
-        print("  Count: " .. obj.count)
-        print("---------------")
-    end
-else
-    print("No world objects found.")
-end
+## RemoveCallbacks
+```lua
+RemoveCallbacks()
 ```
+Removes all Lua functions that were added with `AddCallback`.
+
+---
+
+## GetObjects
+Returns objects from the `Object` table
 
 ---
 
 ## **NetAvatar**
-| Type      | Description |
-| --------- | ----------- |
-| `name`| Player name |
-| `country`| Country name |
-| `netid`| Player's NetID |
-| `uid`| Player's UsernameID |
-| `pos_x`| Pixel X Position |     
-| `pos_y`| Pixel Y Position |
-| `facing_left`| Returns true when player is facing left |
+| Key      | Type   | Description                 |
+|----------|--------|-----------------------------|
+| `name`   | string | Player name (Local) |
+| `world`  | string | World name (Local) |
+| `netid`  | number | Player NetID |
+| `uid`    | number | Player UsernameID |
+| `pos_x`  | number | X Position |
+| `pos_y`  | number | Y Position |
+| `facing_left` | boolean | Return true if facing left |
+| `country`| number  | country id |
 
 ## **Tile**
-| Type      | Description |
-| --------- | ----------- |
-| `fg`| Foreground |
-| `bg`| Background |
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `id`      | number   | Tile itemid |
+| `pos_x`   | number   | Tile's X position |
+| `pos_y`   | number   | Tile's Y position |
+| `fg`      | string   | Tile foreground |
+| `bg`      | string   | Tile background |
 
-## **Objects**
-| Type      | Description |
-| --------- | ----------- |
-| `id`| ItemID |
-| `count`| Amount (stacked) |
-| `pos_x`| Pixel X Position |     
-| `pos_y`| Pixel Y Position |
-| `flags`| Flags |
-| `obj_id`| (This is just a indicator for objects) |
+## **Object**
+| Key   | Type   | Description                 |
+|-------|--------|-----------------------------|
+| `pos_x`   | number | X position of the object |
+| `pos_y`   | number | Y position of the object |
+| `id`  | number | Item ID of the object |
+| `object_id` | number  | Returns object id |
+| `flags` | number  | flags of object |
+| `count` | number  | object count (amount) |
 
+## **VarTable**
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `netid`   | number   | NetID |
+| `delay`   | number   | Delay |
+| `[0]`     | string   | Var case/function |
+| `[1]`     | Any      | Param 1 |
+| `[2]`     | Any      | Param 2 |
+| `[3]`     | Any      | Param 3 |
+| `[4]`     | Any      | Param 4 |
+| `[5]`     | Any      | Param 5 |
