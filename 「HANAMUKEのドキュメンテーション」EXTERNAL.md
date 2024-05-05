@@ -17,6 +17,7 @@
 + [SendWebhook](#SendWebhook)
 + [Sleep](#Sleep)
 + [warp](#warp)
++ [SendVarlist](#SendVarlist)
 
   (coming up)
 + [GetTile](#GetTile)
@@ -197,6 +198,27 @@ Delays with Sleep
 Log("Start script")
 Sleep(2000) -- delay 2 seconds
 Log("2 seconds later")
+```
+
+## SendVarlist
+```lua
+local vartable = {}
+SendVarlist(vartable)
+```
+Sends varlist to the client
+```lua
+-- Example Usage:
+if GetLocal().name ~= "NULL" then
+    
+    local me = GetLocal()
+    local var = {}
+    var[0] = "OnAddNotification"
+    var[1] = "interface/atomic_button.rttex"
+    var[2] = "Warning from `4System`0: You've been `4BANNED`0 from Growtopia for 730 days"
+    var[3] = "audio/hub_open.wav"
+    var.netid = -1
+    SendVarlist(var)
+end
 ```
 
 ---
