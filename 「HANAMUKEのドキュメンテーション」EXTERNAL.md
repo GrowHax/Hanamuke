@@ -150,11 +150,11 @@ print("Background:", tile.bg)
 ```lua
 GetTiles()
 ```
-Logs all tiles in the world.
+logs all tiles in the world.
 ```lua
 -- Example Usage:
 local tiles = GetTiles()
-Log(tiles.bg)
+log(tiles.bg)
 ```
 
 ---
@@ -166,9 +166,9 @@ Sleep(int millisecond)
 Delays with Sleep
 ```lua
 -- Example Usage:
-Log("Start script")
+log("Start script")
 Sleep(2000) -- delay 2 seconds
-Log("2 seconds later")
+log("2 seconds later")
 ```
 
 ---
