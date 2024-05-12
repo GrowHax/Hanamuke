@@ -1,7 +1,7 @@
 ---
 
 <h1 align="center">HANAMUKE INTERNAL</h1>
-<p align="center">This internal will be published for testing soon.</p>
+<p align="center">This internal will be published for release/testing soon.</p>
 <p align="center">Will most likely give a release date on my Discord server<a href="https://discord.gg/SES9tgHEHE" target="_blank"> Join here</a></p>
 
 ## 📝 Functions [Documentation]
