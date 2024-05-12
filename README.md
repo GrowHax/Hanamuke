@@ -14,15 +14,14 @@
 + [SendVarlist](#SendVarlist)
 + [GetTile](#GetTile)
 + [GetTiles](#GetTiles)
-+ [RemoveCallbacks](#RemoveCallbacks)
 + [GetObjects](#GetObjects)
 + [GetInventory](#GetInventory)
++ [AddCallback](#AddCallback)
++ [RemoveCallbacks](#RemoveCallbacks)
 
 # Unfinished docs:
 + [GetIteminfo](#GetIteminfo)
-+ [AddCallback](#AddCallback)
 + [SendWebhook](#SendWebhook)
-+ [warp](#warp)
 + [Drop](#Drop)
 ---
 
@@ -33,8 +32,9 @@ SendPacket(int type, string action)
 Sends a direct packet.
 ```lua
 -- Example Usage:
-SendPacket(2, "action|input\n|text|HELLO)
+SendPacket(2, "action|input\n|text| `#Hi from yuhkil")
 ```
+
 ---
 
 ## SendPacketRaw
@@ -45,31 +45,18 @@ Send Raw Packet to the server
 ```lua
 -- Example Usage:
 function punch(x, y)
-    local pkt = GameUpdatePacket()
+    local pkt = {}
     pkt.type = 3
     pkt.int_data = 18
-    pkt.pos_x = GetPos().x
-    pkt.pos_y = GetPos().y
+    pkt.pos_x = GetLocal().pos_x // 32
+    pkt.pos_y = GetLocal().pos_y // 32
     pkt.int_x = x
     pkt.int_y = y
-    pkt.packet_flags = 2560
+    pkt.flags = 2560
     SendPacketRaw(pkt)
 end
 
-punch((GetPos().x // 32) + 1, (GetPos().y // 32))
-```
-
----
-
-## warp
-```lua
-warp("WORLD")
-```
-
-warp with DoorID is as follow.
-```lua
--- Example usage:
-warp("WORLD|DOORID")
+punch(1, 0)
 ```
 
 ---
@@ -83,25 +70,16 @@ Prints on to the game's console.
 
 ---
 
-## Drop
-```lua
-Drop(itemid, amount)
-```
-Dropping 10 blocks of dirt.
-```lua
--- Example usage:
-Drop(2, 10)
-```
-
----
-
 ## GetInventory
 ```lua
 GetInventory()
 ```
 Returns information from inventory using the `Inventory` table.
 ```lua
-
+-- Example usage:
+for _,item in pairs(GetInventory()) do
+	print(item.id)
+end
 ```
 
 ---
@@ -120,12 +98,12 @@ FindPath(23,50)
 
 ## SendWebhook
 ```lua
-SendWebhook(string message, string webhookurl)
+SendWebhook(string webhook, string json)
 ```
-Sends a message on Discord using Webhook.
+Sends a webhook message (JSON based).
 ```lua
 -- Example Usage:
-SendWebHook("Hello", "https://discord.com/api/webhooks/YOURWEBHOOK")
+SendWebHook("https://discord.com/api/webhooks/YOURWEBHOOK", "payload")
 ```
 
 ---
@@ -197,9 +175,14 @@ end
 ---
 
 ## AddCallback
-```lua
-```
 Adds a Lua function to be called when a specific event occurs in the game.
+```lua
+AddCallback("Hook", "OnPacket", function(type, packet)
+  print("OnPacket callback was called")
+  print(packet)
+  log(packet)
+end)
+```
 
 ## RemoveCallbacks
 ```lua
