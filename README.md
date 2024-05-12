@@ -179,7 +179,6 @@ Adds a Lua function to be called when a specific event occurs in the game.
 ```lua
 AddCallback("Hook", "OnPacket", function(type, packet)
   print("OnPacket callback was called")
-  print(packet)
   log(packet)
 end)
 ```
