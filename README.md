@@ -20,6 +20,7 @@
 + [RemoveCallbacks](#RemoveCallbacks)
 + [CollectItems](#CollectItems)
 + [CollectItem](#CollectItem)
++ [GetItemCount](#GetItemCount)
 
 # Unfinished docs:
 + [SendWebhook](#SendWebhook)
@@ -217,6 +218,18 @@ Collects a specific obj_id within specified range.
 ```lua
 -- Example usage:
 CollectItem(5, any object id) -- got no example for the object id currently
+```
+
+---
+
+## GetItemCount
+```lua
+GetItemCount(int item_id)
+```
+Returns count of given item id.
+```
+-- Example usage:
+log(GetItemCount(2))
 ```
 
 ---
