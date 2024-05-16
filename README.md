@@ -212,12 +212,12 @@ CollectItems(2)
 
 ## CollectItem
 ```lua
-CollectItem(int tile_range, int item_id)
+CollectItem(int tile_range, int obj_id)
 ```
-Collects a specific item_id within specified range. 
+Collects a specific obj_id within specified range. 
 ```lua
--- Example usage (Collecting within 5 blocks any floating dirt block):
-CollectItem(5,2)
+-- Example usage:
+CollectItem(5, any object id) -- got no example for the object id currently
 ```
 
 ---
