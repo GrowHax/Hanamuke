@@ -18,6 +18,7 @@
 + [GetInventory](#GetInventory)
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
++ [AutoCollect](#AutoCollect)
 
 # Unfinished docs:
 + [GetIteminfo](#GetIteminfo)
@@ -193,6 +194,30 @@ Removes all Lua functions that were added with `AddCallback`.
 
 ## GetObjects
 Returns objects from the `Object` table
+
+---
+
+## AutoCollect
+```lua
+AutoCollect(int tile_range)
+```
+Auto Collects Objects within specified tile range.
+```lua
+-- Example usage:
+AutoCollect(2)
+```
+
+---
+
+## CollectItem
+```lua
+Collect(int tile_range, int item_id)
+```
+Collects a specific item_id within specified range. 
+```lua
+-- Example usage (Collecting within 5 blocks any floating dirt block):
+Collect(5,2)
+```
 
 ---
 
