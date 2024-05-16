@@ -211,12 +211,12 @@ AutoCollect(2)
 
 ## CollectItem
 ```lua
-Collect(int tile_range, int item_id)
+CollectItem(int tile_range, int item_id)
 ```
 Collects a specific item_id within specified range. 
 ```lua
 -- Example usage (Collecting within 5 blocks any floating dirt block):
-Collect(5,2)
+CollectItem(5,2)
 ```
 
 ---
