@@ -19,6 +19,7 @@
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
 + [AutoCollect](#AutoCollect)
++ [CollectItem](#CollectItem)
 
 # Unfinished docs:
 + [GetIteminfo](#GetIteminfo)
