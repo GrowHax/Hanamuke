@@ -18,7 +18,7 @@
 + [GetInventory](#GetInventory)
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
-+ [AutoCollect](#AutoCollect)
++ [CollectItems](#CollectItems)
 + [CollectItem](#CollectItem)
 
 # Unfinished docs:
@@ -198,14 +198,14 @@ Returns objects from the `Object` table
 
 ---
 
-## AutoCollect
+## CollectItems
 ```lua
-AutoCollect(int tile_range)
+CollectItems(int tile_range)
 ```
 Auto Collects Objects within specified tile range.
 ```lua
 -- Example usage:
-AutoCollect(2)
+CollectItems(2)
 ```
 
 ---
