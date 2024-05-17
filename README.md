@@ -228,7 +228,7 @@ CollectItem(5, any object id) -- got no example for the object id currently
 GetItemCount(int item_id)
 ```
 Returns count of given item id.
-```
+```lua
 -- Example usage:
 log(GetItemCount(2))
 ```
