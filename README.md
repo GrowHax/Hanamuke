@@ -21,6 +21,7 @@
 + [CollectItems](#CollectItems)
 + [CollectItem](#CollectItem)
 + [GetItemCount](#GetItemCount)
++ [GetPing](#GetPing)
 
 # Unfinished docs:
 + [SendWebhook](#SendWebhook)
@@ -230,6 +231,18 @@ Returns count of given item id.
 ```
 -- Example usage:
 log(GetItemCount(2))
+```
+
+---
+
+## GetPing
+```lua
+GetPing()
+```
+Returns game ping.
+```lua
+-- Example usage:
+log(GetPing())
 ```
 
 ---
