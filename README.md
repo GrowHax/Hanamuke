@@ -23,10 +23,8 @@
 + [GetItemCount](#GetItemCount)
 + [GetPing](#GetPing)
 + [SendWebhook](#SendWebhook)
-
-# Unfinished docs:
-+ [Drop](#Drop)
 ---
+
 
 ## SendPacket
 ```lua
