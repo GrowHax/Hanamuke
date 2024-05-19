@@ -22,9 +22,9 @@
 + [CollectItem](#CollectItem)
 + [GetItemCount](#GetItemCount)
 + [GetPing](#GetPing)
++ [SendWebhook](#SendWebhook)
 
 # Unfinished docs:
-+ [SendWebhook](#SendWebhook)
 + [Drop](#Drop)
 ---
 
@@ -103,10 +103,42 @@ FindPath(23,50)
 ```lua
 SendWebhook(string webhook, string json)
 ```
-Sends a webhook message (JSON based).
+Sends a webhook message (json).
 ```lua
 -- Example Usage:
-SendWebHook("https://discord.com/api/webhooks/YOURWEBHOOK", "payload")
+local payload = [[
+{
+    "content": "",
+    "embeds": [{
+        "title": "watehel",
+        "description": "okay www.",
+        "url": "https://github.com/GrowHax/Hanamuke",
+        "color": 16777215,
+        "fields": [{
+            "name": "whatever",
+            "value": "hey..."
+        }],
+        "author": {
+            "name": "Yuhkil",
+            "url": "https://example.com",
+            "icon_url": "https://i.imgur.com/UvYjKOY.png"
+        },
+        "footer": {
+            "text": "Sent from Hanamuke",
+            "icon_url": "https://i.imgur.com/dDq7U7m.png"
+        },
+        "image": {
+            "url": "https://i.imgur.com/WUlqAxg.png"
+        },
+        "thumbnail": {
+            "url": "https://i.imgur.com/Wp6TaZi.png"
+        },
+        "timestamp": "2023-02-15T17:00:00.000Z"
+    }]
+}
+]]
+local webhook = "your webhook url"
+SendWebhook(webhook, payload)
 ```
 
 ---
