@@ -23,6 +23,7 @@
 + [GetItemCount](#GetItemCount)
 + [GetPing](#GetPing)
 + [SendWebhook](#SendWebhook)
++ [Timer](#Timer)
 ---
 
 
@@ -273,6 +274,24 @@ Returns game ping.
 ```lua
 -- Example usage:
 log(GetPing())
+```
+
+---
+
+## Timer
+Timer, you can find the documentation here -> [Timer Library](https://wiki.facepunch.com/gmod/timer)
+```lua
+AddCallback("timer", "OnUpdate", function(deltatime)
+    timer.Update(deltatime)
+end)
+
+-- second arg is delay (2 seconds in this case)
+-- third arg is repeat amount (0 = infinite, 1 or more = repeat to certain amount) 
+timer.Create("timer_example", 2, 0, function()
+    print("LinusTouchTips") -- prints on the console every 2 seconds
+end)
+
+timer.Destroy("timer_example")
 ```
 
 ---
