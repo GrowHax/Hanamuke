@@ -291,7 +291,7 @@ timer.Create("timer_example", 2, 0, function()
     print("LinusTouchTips") -- prints on the console every 2 seconds
 end)
 
-timer.Destroy("timer_example")
+timer.Destroy("timer_example") -- this will delete the timer when present
 ```
 
 ---
