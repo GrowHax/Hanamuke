@@ -306,7 +306,7 @@ Returns true if tile is solid - Returns false if tile is not solid.
 -- Example usage:
 local x = GetLocal().pos_x // 32
 local y = GetLocal().pos_y // 32
-log(IsSolid(x, y + 1)) -- if solid block it will return true
+print(IsSolid(x, y + 1)) -- if solid block it will return true
 ---
 
 ## **NetAvatar**
