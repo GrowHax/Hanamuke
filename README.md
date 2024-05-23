@@ -24,6 +24,7 @@
 + [GetPing](#GetPing)
 + [SendWebhook](#SendWebhook)
 + [Timer](#Timer)
++ [IsSolid](#IsSolid)
 ---
 
 
@@ -294,6 +295,18 @@ end)
 timer.Destroy("timer_example") -- this will delete the timer when present
 ```
 
+---
+
+## IsSolid
+```lua
+IsSolid(int x, int y)
+```
+Returns true if tile is solid - Returns false if tile is not solid.
+```lua
+-- Example usage:
+local x = GetLocal().pos_x // 32
+local y = GetLocal().pos_y // 32
+log(IsSolid(x, y + 1)) -- if solid block it will return true
 ---
 
 ## **NetAvatar**
