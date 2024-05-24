@@ -25,6 +25,7 @@
 + [SendWebhook](#SendWebhook)
 + [Timer](#Timer)
 + [IsSolid](#IsSolid)
++ [GetAccesslist](#GetAccesslist)
 ---
 
 
@@ -307,6 +308,19 @@ Returns true if tile is solid - Returns false if tile is not solid.
 local x = GetLocal().pos_x // 32
 local y = GetLocal().pos_y // 32
 print(IsSolid(x, y + 1)) -- if solid block it will return true
+```
+
+---
+
+## GetAccesslist
+```lua
+GetAccesslist(int x, int y)
+```
+Returns uids from lock
+```lua
+for __, v in pairs(GetAccessList(49, 12)) do
+    log(v.uid) -- dont forget to pass key uid
+end
 ```
 
 ---
