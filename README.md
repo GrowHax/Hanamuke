@@ -314,7 +314,7 @@ print(IsSolid(x, y + 1)) -- if solid block it will return true
 
 ## GetAccesslist
 ```lua
-GetAccesslist(int x, int y)
+GetAccesslist(int x, int y) -- position of the world lock
 ```
 Returns uids from lock
 ```lua
