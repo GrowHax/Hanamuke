@@ -52,15 +52,15 @@ function punch(x, y)
     local pkt = {}
     pkt.type = 3
     pkt.int_data = 18
-    pkt.pos_x = GetLocal().pos_x // 32
-    pkt.pos_y = GetLocal().pos_y // 32
-    pkt.int_x = x
-    pkt.int_y = y
+    pkt.pos_x = GetLocal().pos_x
+    pkt.pos_y = GetLocal().pos_y
+    pkt.int_x = GetLocal().pos_x // 32 + x
+    pkt.int_y = GetLocal().pos_y // 32 + y
     pkt.flags = 2560
     SendPacketRaw(pkt)
 end
 
-punch(1, 0)
+punch(1,0)
 ```
 
 ---
