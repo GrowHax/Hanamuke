@@ -10,6 +10,7 @@
 + [log](#log)
 + [SendPacket](#SendPacket)
 + [SendPacketRaw](#SendPacketRaw)  
++ [SendPacketRawClient](#SendPacketRawClient)  
 + [Sleep](#Sleep)
 + [SendVarlist](#SendVarlist)
 + [GetTile](#GetTile)
@@ -43,9 +44,9 @@ SendPacket(2, "action|input\n|text| `#Hi from yuhkil")
 
 ## SendPacketRaw
 ```lua
-SendPacketRaw(pkt)
+SendPacketRaw(GamePacket packet)
 ```
-Send Raw Packet to the server
+Send GamePacket to the server
 ```lua
 -- Example Usage:
 function punch(x, y)
@@ -61,6 +62,22 @@ function punch(x, y)
 end
 
 punch(1,0)
+```
+
+---
+
+## SendPacketRawClient
+```lua
+SendPacketRawClient(GamePacket packet)
+```
+Send GamePacket to client
+```lua
+-- Example usage (Adds Golden Heartbow to inventory (client)):
+local packet = {}
+packet.type = 13
+packet.int_data = 1464
+packet.count2 = 1
+SendPacketRawClient(packet)
 ```
 
 ---
