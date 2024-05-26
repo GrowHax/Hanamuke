@@ -353,6 +353,8 @@ end
 | `pos_y`  | number | Y Position |
 | `facing_left` | boolean | Return true if facing left |
 | `country`| number  | country id |
+| `size_x`  | number | Player* size X |
+| `size_y`  | number | Player* size Y |
 
 ## **Tile**
 | Key      | Type     | Description |
