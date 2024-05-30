@@ -385,9 +385,12 @@ end
 | `pos_x`  | number | X Position |
 | `pos_y`  | number | Y Position |
 | `facing_left` | boolean | Return true if facing left |
-| `country`| number  | country id |
+| `country`| string  | country id |
 | `size_x`  | number | Player* size X |
 | `size_y`  | number | Player* size Y |
+| `tile_x`  | number | Player tile position X |
+| `tile_y`  | number | Player tile position Y |
+| `flags`  | number | Player flags |
 
 ## **GamePacket**
 | Key      | Type     | Description |
