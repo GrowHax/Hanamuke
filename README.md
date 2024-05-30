@@ -389,6 +389,15 @@ end
 | `size_x`  | number | Player* size X |
 | `size_y`  | number | Player* size Y |
 
+## **GamePacket**
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `type`      | number   | packet type |
+| `flags`   | number   | packet flags |
+| `count1`   | number   |  |
+| `count2`   | number   |  |
+| `int_data`   | number   |  |
+
 ## **Tile**
 | Key      | Type     | Description |
 | --------- | -------- | ----------- |
