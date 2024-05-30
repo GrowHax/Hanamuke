@@ -17,6 +17,7 @@
 + [GetTiles](#GetTiles)
 + [GetObjects](#GetObjects)
 + [GetInventory](#GetInventory)
++ [GetPlayers](#GetPlayers)
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
 + [CollectItems](#CollectItems)
@@ -100,6 +101,33 @@ Returns information from inventory using the `Inventory` table.
 -- Example usage:
 for _,item in pairs(GetInventory()) do
 	print(item.id)
+end
+```
+
+---
+
+## GetPlayers
+```lua
+GetPlayers()
+```
+Returns `net_avatar` table
+```lua
+-- Example usage:
+local players = GetPlayers()
+if players then
+    for i, player in ipairs(players) do
+        print("  Position X: " .. player.pos_x)
+        print("  Position Y: " .. player.pos_y)
+        print("  Size X: " .. player.size_x)
+        print("  Size Y: " .. player.size_y)
+        print("  Name: " .. player.name)
+        print("  Facing Left: " .. tostring(player.facing_left))
+        print("  User ID: " .. player.uid)
+        print("  Net ID: " .. player.netid)
+        print("  Country: " .. player.country)
+    end
+else
+    print("No players found")
 end
 ```
 
