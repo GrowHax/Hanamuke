@@ -396,7 +396,18 @@ end
 | `flags`   | number   | packet flags |
 | `count1`   | number   |  |
 | `count2`   | number   |  |
+| `pos_x`   | number   |  |
+| `pos_y`   | number   |  |
+| `pos2_x`   | number   |  |
+| `pos2_y`   | number   |  |
+| `int_x`   | number   |  |
+| `int_y`   | number   |  |
 | `int_data`   | number   |  |
+| `float1`   | number   |  |
+| `float2`   | number   |  |
+| `item`   | number   |  |
+| `objtype`   | number   |  |
+| `netid`   | number   |  |
 
 ## **Tile**
 | Key      | Type     | Description |
