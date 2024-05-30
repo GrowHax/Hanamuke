@@ -279,6 +279,11 @@ Removes all Lua functions that were added with `AddCallback`.
 
 ## GetObjects
 Returns objects from the `Object` table
+```lua
+for i,obj in pairs(GetObjects()) do
+	log(obj.id)
+end
+```
 
 ---
 
