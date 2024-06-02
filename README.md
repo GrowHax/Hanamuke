@@ -196,8 +196,8 @@ GetTile(int x, int y)
 Gives information about a Tile
 ```lua
 -- Example Usage:
-local xx = GetLocal().x // 32
-local yy = GetLocal().y // 32
+local xx = GetLocal().pos_x // 32
+local yy = GetLocal().pos_y // 32
 local tile = GetTile(xx,yy)
 print("Foreground:", tile.fg)
 print("Background:", tile.bg)
