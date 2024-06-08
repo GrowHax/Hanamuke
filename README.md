@@ -278,6 +278,7 @@ function hook(type, packet)
 end
 
 AddCallback("Hook", "OnPacket", hook)
+---------------------------------------------------------------
 ```
 
 ## RemoveCallbacks
@@ -382,7 +383,7 @@ print(IsSolid(x, y + 1)) -- if solid block it will return true
 ```lua
 GetAccesslist(int x, int y) -- position of the world lock
 ```
-Returns uids from lock
+Returns uids from people with world lock access
 ```lua
 for __, v in pairs(GetAccessList(49, 12)) do
     log(v.uid) -- dont forget to pass key uid
