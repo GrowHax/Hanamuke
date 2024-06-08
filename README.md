@@ -258,15 +258,26 @@ end
 ## AddCallback
 Adds a Lua function to be called when a specific event occurs in the game.
 ```lua
+ -- prints packet
 AddCallback("Hook", "OnPacket", function(type, packet)
-  print(packet) -- prints packet
+  print(packet)
 end)
 ---------------------------------------------------------------
+ -- hide all dialogs
 AddCallback("hide_dialogs", "OnVarlist", function(varlist, packet)
     if varlist[0]:find("OnDialogRequest") then
         return true
     end
-end) -- hide all dialogs
+end)
+---------------------------------------------------------------
+-- blocks chat
+function hook(type, packet)
+	if packet:find("action|input\n|text") then
+		return true
+	end
+end
+
+AddCallback("Hook", "OnPacket", hook)
 ```
 
 ## RemoveCallbacks
