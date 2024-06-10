@@ -96,7 +96,7 @@ Prints on to the game's console.
 ```lua
 GetInventory()
 ```
-Returns information from inventory using the `Inventory` table.
+Returns information from inventory using the [Inventory](#inventory) table.
 ```lua
 -- Example usage:
 for _,item in pairs(GetInventory()) do
@@ -194,7 +194,7 @@ SendWebhook(webhook, payload)
 GetTile(int x, int y)
 ```
 Gives information about a Tile.
-See [Tile](#tile) struct.
+See [Tile](#tile) table.
 ```lua
 -- Example Usage:
 local xx = GetLocal().pos_x // 32
@@ -211,7 +211,7 @@ print("Background:", tile.bg)
 GetTiles()
 ```
 Gives info of ALL tiles in the world.
-See [Tile](#tile) struct.
+See [Tile](#tile) table.
 ```lua
 -- Example Usage:
 for i,tile in pairs(GetTiles()) do
@@ -462,3 +462,10 @@ end
 | `[3]`     | Any      | Param 3 |
 | `[4]`     | Any      | Param 4 |
 | `[5]`     | Any      | Param 5 |
+
+## Inventory
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `id`      | number   | Item ID |
+| `count`   | number   | Item Amount |
+
