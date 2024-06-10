@@ -193,7 +193,8 @@ SendWebhook(webhook, payload)
 ```lua
 GetTile(int x, int y)
 ```
-Gives information about a Tile
+Gives information about a Tile.
+See [Tile](Tile) struct.
 ```lua
 -- Example Usage:
 local xx = GetLocal().pos_x // 32
@@ -209,11 +210,13 @@ print("Background:", tile.bg)
 ```lua
 GetTiles()
 ```
-logs all tiles in the world.
+Gives info of ALL tiles in the world.
+See [Tile](Tile) struct.
 ```lua
 -- Example Usage:
-local tiles = GetTiles()
-log(tiles.bg)
+for i,tile in pairs(GetTiles()) do
+	log(tile.fg)
+end
 ```
 
 ---
@@ -429,7 +432,7 @@ end
 | `objtype`   | number   |  |
 | `netid`   | number   |  |
 
-## **Tile**
+## Tile
 | Key      | Type     | Description |
 | --------- | -------- | ----------- |
 | `id`      | number   | Tile itemid |
