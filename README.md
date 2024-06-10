@@ -194,7 +194,7 @@ SendWebhook(webhook, payload)
 GetTile(int x, int y)
 ```
 Gives information about a Tile.
-See [Tile](https://github.com/GrowHax/Hanamuke/tree/main#tile) struct.
+See [Tile](#tile) struct.
 ```lua
 -- Example Usage:
 local xx = GetLocal().pos_x // 32
@@ -211,7 +211,7 @@ print("Background:", tile.bg)
 GetTiles()
 ```
 Gives info of ALL tiles in the world.
-See [Tile](https://github.com/GrowHax/Hanamuke/tree/main#tile) struct.
+See [Tile](#tile) struct.
 ```lua
 -- Example Usage:
 for i,tile in pairs(GetTiles()) do
