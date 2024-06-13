@@ -281,7 +281,7 @@ end
 
 AddCallback("Hook", "OnPacket", hook)
 ---------------------------------------------------------------
--- returns the geiger signal color
+-- returns the geiger signal
 function find_signal(color)
     log("Geiger signal color: " .. color)
 end
@@ -463,3 +463,9 @@ end
 | `id`      | number   | Item ID |
 | `count`   | number   | Item Amount |
 
+## GeigerSignal
+| Key      | Type     | Description |
+| --------- | -------- | ----------- |
+| `red`      | string   | Red signal |
+| `yellow`   | string   | Yellow signal |
+| `green`   | string   | Green signal |
