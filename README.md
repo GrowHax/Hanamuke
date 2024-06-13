@@ -281,6 +281,13 @@ end
 
 AddCallback("Hook", "OnPacket", hook)
 ---------------------------------------------------------------
+-- returns the geiger signal color
+function find_signal(color)
+    log("Geiger signal color: " .. color)
+end
+
+AddCallback("geiger_test", "OnGeigerSignal", find_signal)
+---------------------------------------------------------------
 ```
 
 ## RemoveCallbacks
