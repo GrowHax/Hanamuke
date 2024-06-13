@@ -21,7 +21,6 @@
 + [AddCallback](#AddCallback)
 + [RemoveCallbacks](#RemoveCallbacks)
 + [CollectItems](#CollectItems)
-+ [CollectItem](#CollectItem)
 + [GetItemCount](#GetItemCount)
 + [GetPing](#GetPing)
 + [SendWebhook](#SendWebhook)
