@@ -27,6 +27,7 @@
 + [Timer](#Timer)
 + [IsSolid](#IsSolid)
 + [GetAccesslist](#GetAccesslist)
++ [PathFind](#PathFind)
 ---
 
 
@@ -384,6 +385,19 @@ Returns uids from people with world lock access
 ```lua
 for __, v in pairs(GetAccessList(49, 12)) do
     log(v.uid) -- dont forget to pass key uid
+end
+```
+
+---
+
+## PathFind
+`PathFind(int x, int y)`
+Calculates the path. (useful for FindPath).
+```
+-- Example usage:
+local path = PathFind(2, 23)
+for i, v in ipairs(path) do
+    print(("%d, %d"):format(v.x, v.y))
 end
 ```
 
