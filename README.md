@@ -32,9 +32,8 @@
 
 
 ## SendPacket
-```lua
-SendPacket(int type, string action)
-```
+`SendPacket(int type, string action)`
+
 Sends a direct packet.
 ```lua
 -- Example Usage:
@@ -44,9 +43,8 @@ SendPacket(2, "action|input\n|text| `#Hi from yuhkil")
 ---
 
 ## SendPacketRaw
-```lua
-SendPacketRaw(GamePacket packet)
-```
+`SendPacketRaw(GamePacket packet)`
+
 Send GamePacket to the server
 ```lua
 -- Example Usage:
@@ -68,9 +66,8 @@ punch(1,0)
 ---
 
 ## SendPacketRawClient
-```lua
-SendPacketRawClient(GamePacket packet)
-```
+`SendPacketRawClient(GamePacket packet)`
+
 Send GamePacket to client
 ```lua
 -- Example usage (Adds Golden Heartbow to inventory (client)):
@@ -84,6 +81,8 @@ SendPacketRawClient(packet)
 ---
 
 ## log
+`log(string message)` 
+
 ```lua
 -- Example usage:
 log("Hello There")
@@ -93,9 +92,8 @@ Prints on to the game's console.
 ---
 
 ## GetInventory
-```lua
-GetInventory()
-```
+`GetInventory()`
+
 Returns information from inventory using the [Inventory](#inventory) table.
 ```lua
 -- Example usage:
@@ -107,9 +105,8 @@ end
 ---
 
 ## GetPlayers
-```lua
-GetPlayers()
-```
+`GetPlayers()`
+
 Returns `net_avatar` table
 ```lua
 -- Example usage:
@@ -134,9 +131,8 @@ end
 ---
 
 ## FindPath
-```lua
-FindPath(int x, int y)
-```
+`FindPath(int x, int y)`
+
 Teleports with the best path to the destination.
 ```lua
 -- Example usage:
@@ -146,9 +142,8 @@ FindPath(23,50)
 ---
 
 ## SendWebhook
-```lua
-SendWebhook(string webhook, string json)
-```
+`SendWebhook(string webhook, string json)`
+
 Sends a webhook message (json).
 ```lua
 -- Example Usage:
@@ -190,9 +185,8 @@ SendWebhook(webhook, payload)
 ---
 
 ## GetTile
-```lua
-GetTile(int x, int y)
-```
+`GetTile(int x, int y)`
+
 Gives information about a Tile.
 See [Tile](#tile) table.
 ```lua
@@ -207,9 +201,8 @@ print("Background:", tile.bg)
 ---
 
 ## GetTiles
-```lua
-GetTiles()
-```
+`GetTiles()`
+
 Gives info of ALL tiles in the world.
 See [Tile](#tile) table.
 ```lua
@@ -222,9 +215,8 @@ end
 ---
 
 ## Sleep
-```lua
-Sleep(int millisecond)
-```
+`Sleep(int millisecond)`
+
 Delays with Sleep
 ```lua
 -- Example Usage:
@@ -236,10 +228,8 @@ log("2 seconds later")
 ---
 
 ## SendVarlist
-```lua
-local vartable = {}
-SendVarlist(vartable)
-```
+`SendVarlist(vartable)`
+
 Sends varlist to the client
 ```lua
 -- Example Usage:
@@ -259,6 +249,8 @@ end
 ---
 
 ## AddCallback
+`AddCallback(string name, void* function)`
+
 Adds a Lua function to be called when a specific event occurs in the game.
 ```lua
  -- prints packet
@@ -292,14 +284,15 @@ AddCallback("geiger_test", "OnGeigerSignal", find_signal)
 ```
 
 ## RemoveCallbacks
-```lua
-RemoveCallbacks()
-```
+`RemoveCallbacks()`
+
 Removes all Lua functions that were added with `AddCallback`.
 
 ---
 
 ## GetObjects
+`GetObjects()`
+
 Returns objects from the `Object` table
 ```lua
 for i,obj in pairs(GetObjects()) do
@@ -310,9 +303,8 @@ end
 ---
 
 ## CollectItems
-```lua
-CollectItems(int tile_range)
-```
+`CollectItems(int tile_range)`
+
 Auto Collects Objects within specified tile range.
 ```lua
 -- Example usage:
@@ -322,9 +314,8 @@ CollectItems(2)
 ---
 
 ## GetItemCount
-```lua
-GetItemCount(int item_id)
-```
+`GetItemCount(int item_id)`
+
 Returns count of given item id.
 ```lua
 -- Example usage:
@@ -334,9 +325,8 @@ log(GetItemCount(2))
 ---
 
 ## GetPing
-```lua
-GetPing()
-```
+`GetPing()`
+
 Returns game ping.
 ```lua
 -- Example usage:
@@ -364,23 +354,21 @@ timer.Destroy("timer_example") -- this will delete the timer when present
 ---
 
 ## IsSolid
-```lua
-IsSolid(int x, int y)
-```
+`IsSolid(int x, int y)`
+
 Returns true if tile is solid - Returns false if tile is not solid.
 ```lua
 -- Example usage:
 local x = GetLocal().pos_x // 32
 local y = GetLocal().pos_y // 32
-print(IsSolid(x, y + 1)) -- if solid block it will return true
+print(IsSolid(x, y)) -- if solid block it will return true
 ```
 
 ---
 
 ## GetAccesslist
-```lua
-GetAccesslist(int x, int y) -- position of the world lock
-```
+`GetAccesslist(int x, int y)`
+
 Returns uids from people with world lock access
 ```lua
 for __, v in pairs(GetAccessList(49, 12)) do
@@ -392,6 +380,7 @@ end
 
 ## PathFind
 `PathFind(int x, int y)`
+
 Calculates the path. (useful for FindPath).
 ```
 -- Example usage:
