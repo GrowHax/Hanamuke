@@ -28,6 +28,7 @@
 + [IsSolid](#IsSolid)
 + [GetAccesslist](#GetAccesslist)
 + [PathFind](#PathFind)
++ [RunThread](#Runthread)
 ---
 
 
@@ -388,6 +389,17 @@ local path = PathFind(2, 23)
 for i, v in ipairs(path) do
     print(("%d, %d"):format(v.x, v.y))
 end
+```
+
+## RunThread
+`RunThread(function)`
+
+Run functions inside a seperate thread
+```
+RunThread(function()
+	log("Hi")
+	Sleep(1000)
+end)
 ```
 
 ---
