@@ -1,6 +1,6 @@
 ---
 
-<h1 align="center">HANAMUKE INTERNAL</h1>=
+<h1 align="center">HANAMUKE INTERNAL</h1>
 <p align="center">Will most likely give a release date on my Discord server <a href="https://discord.gg/SES9tgHEHE" target="_blank">Join here</a></p>
 <p align="center">もう何ヶ月も更新し続けているのに、全然公開する時間がない！どうしたらいいんだろう… </p>
 
