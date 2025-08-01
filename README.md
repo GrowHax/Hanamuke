@@ -449,6 +449,7 @@ end)
 | `pos_y`   | number   | Tile's Y position |
 | `fg`      | string   | Tile foreground |
 | `bg`      | string   | Tile background |
+| `ready`      | bool   | Returns true if tree ready |
 
 ## **Object**
 | Key   | Type   | Description                 |
